@@ -1,0 +1,21 @@
+Comando per cifrare un documento .txt utilizzando openSSL:
+"openssl enc -aes-256-cbc -salt -in <<documento.txt da cifrare>> -out <<documento.enc cifrato>>  -k <<password>>"
+
+Comando per decifrare il documento .enc utilizzando openSSL:
+"openssl enc -d -aes-256-cbc -salt -in <<documento.enc cifrato>> -out <<documento decifrato.txt>> -k <<password>>"
+
+
+Comando per cifrare tramite hash md5:
+"openssl dgst -md5 -out hash2.dat <<nome del file che vuoi cufrare>>"
+
+
+
+Creazione di una chiave privata:
+openssl genrsa -out <<nome del file.dat>> <<numero dei byte>>
+
+Creazione di una chiave pubblica:
+openssl rsa -in <<chiave-privata.dat>> -out <<chiave-pubblica.dat>> -pubout -outform PEM
+
+Comando per cifrare con la chiave pubblica:
+openssl rsautl -encrypt -inkey <<chiave-pubblica.dat>> -pubin -in <<chiave-privata.dat>> -out <<nome file.enc>>
+

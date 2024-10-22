@@ -1,0 +1,10 @@
+Comandi Linux Sicurezza:
+pip install pycryptodome --break-system-packages = serve per scaricare le librerie python 
+
+Confidenzialità:
+chmod a=r - all
+chmod u=rwx - owner
+chmod g=rwx - group
+chmod o=rw - other
+
+traceroute -n = serve per verificare tutti gli ip in cui è passato il pacchetto, -n serve per evitare di far stampare il nome dispositivo da cui passano
